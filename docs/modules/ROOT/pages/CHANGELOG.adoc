@@ -1,0 +1,242 @@
+= Changelog
+
+:sectnums!:
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.20.4...v1.0.0++[1.0.0^] (2021-04-20)
+
+=== Bug Fixes
+
+* *centos:* get service running to work
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/ad5636ad17447b84b28e3d4fd4fb7145da83052b[ad5636a^])
+* *centos:* get systemd service passing
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/ee0183684e5a36846d59e7880e48ddf27d8476c3[ee01836^])
+
+=== Code Refactoring
+
+* *formula:* align to template formula
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/d55402f0b87889b9a47bd289148232de106302a4[d55402f^])
+
+=== BREAKING CHANGES
+
+* *formula:* This formula has been refactored to align with template
+formula. States have changed, and some pillar data
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.20.3...v0.20.4++[0.20.4^] (2021-04-12)
+
+=== Bug Fixes
+
+* *latest.sls:* change apt repository following bintray shutdown
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/ac16a5f3e08f539d944ea5ecf3de523a5c796301[ac16a5f^])
+
+=== Continuous Integration
+
+* *gemfile+lock:* use `ssf` customised `kitchen-docker` repo [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/c456f53235f12bfa7698b4462e6ddc39e79e3c1e[c456f53^])
+* *kitchen+ci:* use latest pre-salted images (after CVE) [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/9a6f0c6e5bcd8bf0b13b8b02f256a8f1e763109e[9a6f0c6^])
+* *kitchen+gitlab-ci:* use latest pre-salted images [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/ebb55f3aec4dedc56315e83f707a3144700bd3d1[ebb55f3^])
+* *pre-commit:* update hook for `rubocop` [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/04ddd762bc7e17820401694f0605d1238e7753a7[04ddd76^])
+
+=== Tests
+
+* standardise use of `share` suite & `_mapdata` state [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/2d8276361caf62a89a4e40e18de8e0f783a6d917[2d82763^])
+* *_mapdata:* add verification files for Fedora 32+33 & Ubuntu 20.04
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/f0b0182b2697a08ab4928037a3fcb1c8be40cf17[f0b0182^])
+* *share:* standardise with latest changes [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/133ba1dee12c1d71ca12e3f7c6c4b6285a8fc07b[133ba1d^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.20.2...v0.20.3++[0.20.3^] (2021-01-14)
+
+=== Bug Fixes
+
+* *_mapdata:* ensure map data is directly under `values`
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/164fb6263f4e741b574741e39801549b7837fdc8[164fb62^])
+
+=== Tests
+
+* *_mapdata:* update for `_mapdata/init.sls` change
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/dbadb4e89d651cfef5ffa4a62e2a9b717f9ea38c[dbadb4e^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.20.1...v0.20.2++[0.20.2^] (2020-12-23)
+
+=== Code Refactoring
+
+* *map:* use top-level `values:` key in `map.jinja` dumps
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/7cff4deae2177073bb325bcf9eeb88919f705fc5[7cff4de^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.20.0...v0.20.1++[0.20.1^] (2020-12-22)
+
+=== Continuous Integration
+
+* *commitlint:* ensure `upstream/master` uses main repo URL [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/af49850d605468ec956c22895f92fe8084dac7c3[af49850^])
+* *gitlab-ci:* add `rubocop` linter (with `allow_failure`) [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/4d549db99d23f76b0922d0b98c9ad2d41dab8641[4d549db^])
+
+=== Tests
+
+* *_mapdata:* generate verification files
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/2b9a968fb64a32c2d179e260e598f72f9c6e413b[2b9a968^])
+* *map:* verify `map.jinja` dump using `_mapdata` state
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/4d0287d2849c09507944b95e8c86c3043273a785[4d0287d^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.19.1...v0.20.0++[0.20.0^] (2020-12-16)
+
+=== Continuous Integration
+
+* *gemfile.lock:* add to repo with updated `Gemfile` [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/5e215cd5df50402875ee7ea92de7677b62029b71[5e215cd^])
+* *gitlab-ci:* use GitLab CI as Travis CI replacement
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/9ac76908833c7615cc2cd82cc7110c356673d171[9ac7690^])
+* *kitchen:* use `saltimages` Docker Hub where available [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/fcdef3ff327385b8cde4aae17cbd47514e761f4c[fcdef3f^])
+* *kitchen+travis:* remove `master-py2-arch-base-latest` [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/d4a6c8fadf3f8dacce099c7ae27194cfddba7fa5[d4a6c8f^])
+* *pre-commit:* add to formula [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/2547b23f55fd3927c5df12296a459584f4cae693[2547b23^])
+* *pre-commit:* enable/disable `rstcheck` as relevant [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/f04bfe6f57d1c039d81c838b94db26b14f8549fe[f04bfe6^])
+* *pre-commit:* finalise `rstcheck` configuration [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/3e1b39778f4ff95b918cf571290ef18a4402e405[3e1b397^])
+* *travis:* add notifications => zulip [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/232e38fb5c561b29608d542b97991de6406d5e52[232e38f^])
+* *workflows/commitlint:* add to repo [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/cea9af8f419144a50f3cc5d83c9307d1c4018b92[cea9af8^])
+
+=== Features
+
+* *suse:* basic suse support
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/4a67836fa02bec3efda06d2affae7f4940cad953[4a67836^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.19.0...v0.19.1++[0.19.1^] (2020-02-18)
+
+=== Bug Fixes
+
+* *slspath:* use `tplroot` to prevent path errors in `Neon`
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/d4982df5c573fd3cc91177f56ad914f6916f02b4[d4982df^]),
+closes
+https://github.com//travis-ci.org/myii/rabbitmq-formula/jobs/651200625/issues/L1830[/travis-ci.org/myii/rabbitmq-formula/jobs/651200625#L1830^]
+https://github.com//travis-ci.org/myii/rabbitmq-formula/jobs/651200626/issues/L1779[/travis-ci.org/myii/rabbitmq-formula/jobs/651200626#L1779^]
+
+=== Continuous Integration
+
+* *kitchen:* avoid using bootstrap for `master` instances [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/e3c9993e8631ac5f188dbde91b609d3d5aa12167[e3c9993^])
+* *kitchen:* standardise structure [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/977c8a02bbfcb8a6995fe54188481d3f9b02c4eb[977c8a0^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.18.0...v0.19.0++[0.19.0^] (2019-12-23)
+
+=== Continuous Integration
+
+* *kitchen:* add salt state to kitchen exec
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/85e2e321c6c179f6eefdea226e64b2a1d4888028[85e2e32^])
+* *kitchen:* standardise structure [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/3eaab517a098ed2b9c27b1f996ac72b2293d92c7[3eaab51^])
+* *travis:* use `major.minor` for `semantic-release` version [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/2e6a92becc13e421320b4963bdd4a45302bbc5dd[2e6a92b^])
+
+=== Features
+
+* config state now also managed rabbitmq env file
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/53f12d2f8053c0a4afe3f8fc3ef5006e453cc435[53f12d2^])
+
+=== Tests
+
+* *inspec:* test new rabbitmq-env file
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/f7e5d391d7537fe91a0b425043b7d83bfb247511[f7e5d39^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.17.0...v0.18.0++[0.18.0^] (2019-12-19)
+
+=== Continuous Integration
+
+* *gemfile:* restrict `train` gem version until upstream fix [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/e97c976c4b3f3c38ff05886787289ca191912e73[e97c976^])
+* *travis:* quote pathspecs used with `git ls-files` [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/b350c1704af7d624b2b975552a6ff01bac6b3aac[b350c17^])
+* *travis:* run `shellcheck` during lint job [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/b50083a1f0b9489fade69da6027e00767ebd5225[b50083a^])
+
+=== Features
+
+* config_files source can be a salt:// path
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/69308a071089e75d26915c0cd7e9e7aef7a9976a[69308a0^])
+
+=== Tests
+
+* add test for config_files
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/2854d1bc112349f7344c153430c0c401e8654344[2854d1b^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.16.0...v0.17.0++[0.17.0^] (2019-11-21)
+
+=== Continuous Integration
+
+* *travis:* opt-in to `dpl v2` to complete build config validation [skip
+ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/ff04ee9439d4884a5ced793ee978e056064908a8[ff04ee9^])
+
+=== Features
+
+* *config.sls:* remove guest user by default
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/4531ac48983f9ad7da51f4d6b562754483d9baad[4531ac4^])
+
+=== Tests
+
+* *rabbitmq_users_spec.rb:* fix rubocop violations
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/57efa458af19851ae030eb788f35fcf20bb157b6[57efa45^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.15.1...v0.16.0++[0.16.0^] (2019-11-19)
+
+=== Bug Fixes
+
+* *latest:* ensure required Debian packages are installed
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/89b470f7124795353a5087ac872d1e8c510f240c[89b470f^])
+
+=== Continuous Integration
+
+* *kitchen+travis:* add `latest` suite
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/29fbcd2f374bfd02742743587cda6bbcbe6389c7[29fbcd2^])
+* *travis:* apply changes from build config validation [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/4a1dacbff36199c3692336fe6ac2a29ceaae49a8[4a1dacb^])
+
+=== Features
+
+* *travis:* apply changes from build config validation
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/7d9533c31842f36b943e033bce6b9bc794121d1d[7d9533c^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.15.0...v0.15.1++[0.15.1^] (2019-11-14)
+
+=== Bug Fixes
+
+* *latest.sls:* use Bintray repo on Debian
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/b50f347c94d582f43d86182959a8b966e78dac0e[b50f347^])
+* *release.config.js:* use full commit hash in commit link [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/b4b27d2479770312e5130692dfa44c003857be1d[b4b27d2^])
+
+=== Continuous Integration
+
+* *kitchen:* use `develop` image until `master` is ready (`amazonlinux`)
+ [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/a5a194408e7f81a79b51be47feced1b883690753[a5a1944^])
+* *travis:* use build config validation (beta) [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/e0f50762fa01b2ef3e0621dd4b4246d1d8d81e05[e0f5076^])
+
+=== Performance Improvements
+
+* *travis:* improve `salt-lint` invocation [skip ci]
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/1bf9e23f02801179b97021fe94c2d90a37d7cb04[1bf9e23^])
+
+== link:++https://github.com/saltstack-formulas/rabbitmq-formula/compare/v0.14.1...v0.15.0++[0.15.0^] (2019-10-29)
+
+=== Features
+
+* *semantic-release:* implement for this formula
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/2b5e400[2b5e400^])
+
+=== Tests
+
+* implement test using Kitchen and Inspec, and CI with Travis
+(https://github.com/saltstack-formulas/rabbitmq-formula/commit/e9eb8ff[e9eb8ff^])
