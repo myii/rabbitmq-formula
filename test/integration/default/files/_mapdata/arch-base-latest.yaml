@@ -62,6 +62,7 @@ values:
     - C@rabbitmq
     - Y:G@id
   pkg:
+    deps: []
     name: rabbitmq
     use_upstream: repo
   plugin:
