@@ -386,8 +386,8 @@ suites:
         base:
           '*':
             - rabbitmq._mapdata
-            - states.files
-            - rabbitmq
+            # - states.files
+            # - rabbitmq
       pillars:
         top.sls:
           base:
